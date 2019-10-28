@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> list = new ArrayList<>();
         list.add("PROFILE");
         list.add("DIAL");
-        list.add("....");
+        list.add("...");
 
         RecyclerView recycler = findViewById(R.id.recycler);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(list);

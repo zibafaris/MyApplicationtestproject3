@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewAdapterHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter <RecyclerViewAdapter.TestRecyclerViewHolder>{
     ArrayList<String> myList;
 
     public RecyclerViewAdapter(ArrayList list) {
@@ -18,15 +18,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @NonNull
     @Override
-    public RecyclerViewAdapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TestRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview, parent, false);
-        RecyclerViewAdapterHolder holder = new RecyclerViewAdapterHolder(v);
+        TestRecyclerViewHolder holder = new TestRecyclerViewHolder(v);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewAdapterHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TestRecyclerViewHolder holder, int position) {
 
         holder.txtName.setText(myList.get(position));
         if(holder.txtName.getText()=="PROFILE"){
@@ -54,13 +54,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return myList.size();
     }
 
-    public class RecyclerViewAdapterHolder extends RecyclerView.ViewHolder{
+    public class TestRecyclerViewHolder extends RecyclerView.ViewHolder {
         TextView txtName;
 
-        public RecyclerViewAdapterHolder(@NonNull View itemView) {
+        public TestRecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.btnName);
         }
     }
-
 }

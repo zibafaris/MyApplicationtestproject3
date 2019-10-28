@@ -1,5 +1,6 @@
 package com.example.myapplicationrecyclerview;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
+@SuppressLint("Registered")
 public class ViewActivity extends AppCompatActivity {
 
     @Override
@@ -62,6 +64,5 @@ public class ViewActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }
